@@ -24,7 +24,7 @@
 @property (strong) NSString *userName;
 @property (strong) NSString *data;
 
-- (IBAction)SaveQuit:(id)sender;
+- (IBAction)Save:(id)sender;
 
 
 - (NSString *) writeToBelarc: (NSString *) userName withPass: (NSString *) passWord;

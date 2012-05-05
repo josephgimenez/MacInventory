@@ -96,12 +96,13 @@
 
 }
 
-- (IBAction)SaveQuit:(id)sender {
+- (IBAction)Save:(id)sender {
     
     /* 
      * Ask for Computer Owner's Name
      */
     
+    // Create new NSAlert to acquire User's credentials with access to Belarc share
     NSAlert *ownerAlert = [NSAlert alertWithMessageText:@"Whose Mac is this?" defaultButton:@"OK" alternateButton:@"Cancel" otherButton:nil informativeTextWithFormat:@"Please use format: firstname lastname"];
     
     // Create accessory text field and add to NSAlert modal window
@@ -110,6 +111,7 @@
     
     NSInteger buttonSelected = [ownerAlert runModal];
     
+    // Did user submit credentials?
     if (buttonSelected == NSAlertDefaultReturn) {
         // User didn't cancel so set inputted value to self.owner string
         [ownerName validateEditing];
@@ -180,7 +182,7 @@
 
 - (NSString *) writeToBelarc:(NSString *)userName withPass:(NSString *)passWord
 {
-    // Grab serial number of Machine
+    // Run script to mount samba share (Belarc) and write report to share
     NSTask *mountShare;
     mountShare = [[NSTask alloc] init];
     [mountShare setLaunchPath: @"/bin/sh"];
@@ -214,29 +216,34 @@
 
 - (NSString *) acquireStat:(NSString *)fileName withType:(NSString *)fileType
 {
-    // Grab serial number of Machine
+    // Run specified script "fileName + fileType" and return script return value as NSString
     NSTask *runMacSpecScript;
     runMacSpecScript = [[NSTask alloc] init];
     [runMacSpecScript setLaunchPath: @"/bin/sh"];
     
+    // Specify script path as argument to /bin/sh interpreter
     NSArray *arguments;
     NSString *newPath = [[NSBundle mainBundle] pathForResource:fileName ofType:fileType];
     NSLog(@"shell script path: %@", newPath);
     arguments = [NSArray arrayWithObjects:newPath, nil];
     [runMacSpecScript setArguments:arguments];
     
+    // Set pipe to collect return value of script
     NSPipe *pipe;
     pipe = [NSPipe pipe];
     [runMacSpecScript setStandardOutput:pipe];
     
+    // Point file handle to pipe buffer
     NSFileHandle *file;
     file = [pipe fileHandleForReading];
     
     [runMacSpecScript launch];
     
+    // Read data from buffer using file handle
     NSData *data;
     data = [file readDataToEndOfFile];
     
+    // Collect data (output from script) and return as NSString
     NSString *stat;
     stat = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
