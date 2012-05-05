@@ -61,12 +61,16 @@
     diskSizeInfo = [[NSString alloc] initWithString:[self acquireStat:@"getdisks" withType:@"sh"]];
     diskSizeInfo = [diskSizeInfo stringByReplacingOccurrencesOfString:@"*" withString:@""];
     diskSizeInfo = [diskSizeInfo stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    // Create an array by splitting script by line breaks
     NSArray *disks = [diskSizeInfo componentsSeparatedByString:@"\n"];
+    
     [self.disk0 setStringValue:[NSString stringWithFormat:@"%@",[disks objectAtIndex:0]]];
     
     if ([disks count] > 1) {
         [self.disk1 setStringValue:[NSString stringWithFormat:@"%@", [disks objectAtIndex:1]]];
     } else {
+        // Second disk not found so set textfield to N/A
         [self.disk1 setStringValue:@"N/A"];
     }
     
@@ -86,6 +90,7 @@
         [self.disk1 setStringValue:[NSString stringWithFormat:@"%@ GB / %@", [self.disk1 stringValue], [disks objectAtIndex:1]]];
         
     } else {
+        // Second disk not found so set textfield to N/A
         [self.disk1 setStringValue:@"N/A"];
     }
 
@@ -99,15 +104,18 @@
     
     NSAlert *ownerAlert = [NSAlert alertWithMessageText:@"Whose Mac is this?" defaultButton:@"OK" alternateButton:@"Cancel" otherButton:nil informativeTextWithFormat:@"Please use format: firstname lastname"];
     
+    // Create accessory text field and add to NSAlert modal window
     NSTextField *ownerName = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 200, 25)];
     [ownerAlert setAccessoryView:ownerName];
     
     NSInteger buttonSelected = [ownerAlert runModal];
     
     if (buttonSelected == NSAlertDefaultReturn) {
+        // User didn't cancel so set inputted value to self.owner string
         [ownerName validateEditing];
         self.owner = [[NSString alloc] initWithString:[ownerName stringValue]];
     } else {
+        // User cancelled
         return;
     }
     
@@ -118,6 +126,11 @@
     
     self.userName = [[NSString alloc] initWithString:[self acquireStat:@"whoami" withType:@"sh"]];
     self.userName = [self.userName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    
+    /*
+     * Generate HTML for report and save to Belarc share
+     */
     
     self.data = [[NSString alloc]
                       initWithFormat:@"<HTML>\n \
@@ -150,9 +163,15 @@
                       [self.disk0 stringValue], [self.disk1 stringValue]];
     
     
+    // Create Credentials Window
     self.credentialsController = [[CredentialsWindowController alloc]
                              initWithWindowNibName:@"CredentialsWindowController"];
+    
+    // Set our delegate "writeToBelarc" to this class
     [self.credentialsController setDelegate:self];
+    
+    
+    // Show window
     [self.credentialsController showWindow:self];
     
     
@@ -162,24 +181,24 @@
 - (NSString *) writeToBelarc:(NSString *)userName withPass:(NSString *)passWord
 {
     // Grab serial number of Machine
-    NSTask *newTask;
-    newTask = [[NSTask alloc] init];
-    [newTask setLaunchPath: @"/bin/sh"];
+    NSTask *mountShare;
+    mountShare = [[NSTask alloc] init];
+    [mountShare setLaunchPath: @"/bin/sh"];
     
     NSArray *arguments;
     NSString *newPath = [[NSBundle mainBundle] pathForResource:@"mountshare" ofType:@"sh"];
     NSLog(@"shell script path: %@", newPath);
     arguments = [NSArray arrayWithObjects:newPath, userName, passWord, nil];
-    [newTask setArguments:arguments];
+    [mountShare setArguments:arguments];
     
     NSPipe *pipe;
     pipe = [NSPipe pipe];
-    [newTask setStandardOutput:pipe];
+    [mountShare setStandardOutput:pipe];
     
     NSFileHandle *file;
     file = [pipe fileHandleForReading];
     
-    [newTask launch];
+    [mountShare launch];
     
     NSData *data;
     data = [file readDataToEndOfFile];
@@ -196,24 +215,24 @@
 - (NSString *) acquireStat:(NSString *)fileName withType:(NSString *)fileType
 {
     // Grab serial number of Machine
-    NSTask *newTask;
-    newTask = [[NSTask alloc] init];
-    [newTask setLaunchPath: @"/bin/sh"];
+    NSTask *runMacSpecScript;
+    runMacSpecScript = [[NSTask alloc] init];
+    [runMacSpecScript setLaunchPath: @"/bin/sh"];
     
     NSArray *arguments;
     NSString *newPath = [[NSBundle mainBundle] pathForResource:fileName ofType:fileType];
     NSLog(@"shell script path: %@", newPath);
     arguments = [NSArray arrayWithObjects:newPath, nil];
-    [newTask setArguments:arguments];
+    [runMacSpecScript setArguments:arguments];
     
     NSPipe *pipe;
     pipe = [NSPipe pipe];
-    [newTask setStandardOutput:pipe];
+    [runMacSpecScript setStandardOutput:pipe];
     
     NSFileHandle *file;
     file = [pipe fileHandleForReading];
     
-    [newTask launch];
+    [runMacSpecScript launch];
     
     NSData *data;
     data = [file readDataToEndOfFile];
