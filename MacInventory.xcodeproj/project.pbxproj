@@ -1,0 +1,364 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F31057D315536FB40026AD7E /* drivemodel.sh in Resources */ = {isa = PBXBuildFile; fileRef = F31057D115536AFE0026AD7E /* drivemodel.sh */; };
+		F31413ED154E0FDA00E825DE /* mountshare.sh in Resources */ = {isa = PBXBuildFile; fileRef = F31413EC154E0FDA00E825DE /* mountshare.sh */; };
+		F3205FD2154BC8CC007D21D2 /* getserial.sh in Resources */ = {isa = PBXBuildFile; fileRef = F3205FCD154BC0B2007D21D2 /* getserial.sh */; };
+		F3205FD3154BC8CC007D21D2 /* getmodel.sh in Resources */ = {isa = PBXBuildFile; fileRef = F3205FD1154BC613007D21D2 /* getmodel.sh */; };
+		F3205FD5154C2315007D21D2 /* getram.sh in Resources */ = {isa = PBXBuildFile; fileRef = F3205FD4154C2200007D21D2 /* getram.sh */; };
+		F3205FD7154C2C0A007D21D2 /* banksize.sh in Resources */ = {isa = PBXBuildFile; fileRef = F3205FD6154C2C0A007D21D2 /* banksize.sh */; };
+		F3205FD9154C2F4A007D21D2 /* bankspeed.sh in Resources */ = {isa = PBXBuildFile; fileRef = F3205FD8154C2E71007D21D2 /* bankspeed.sh */; };
+		F3205FDB154C3DDA007D21D2 /* getos.sh in Resources */ = {isa = PBXBuildFile; fileRef = F3205FDA154C3DC6007D21D2 /* getos.sh */; };
+		F3205FDD154C4157007D21D2 /* getdisks.sh in Resources */ = {isa = PBXBuildFile; fileRef = F3205FDC154C4149007D21D2 /* getdisks.sh */; };
+		F3205FDF154C462A007D21D2 /* whoami.sh in Resources */ = {isa = PBXBuildFile; fileRef = F3205FDE154C4629007D21D2 /* whoami.sh */; };
+		F335651E154BB8B9009449C6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F335651D154BB8B9009449C6 /* Cocoa.framework */; };
+		F3356528154BB8B9009449C6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3356526154BB8B9009449C6 /* InfoPlist.strings */; };
+		F335652A154BB8B9009449C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3356529154BB8B9009449C6 /* main.m */; };
+		F335652E154BB8B9009449C6 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F335652C154BB8B9009449C6 /* Credits.rtf */; };
+		F3356531154BB8B9009449C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3356530154BB8B9009449C6 /* AppDelegate.m */; };
+		F3356534154BB8B9009449C6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3356532154BB8B9009449C6 /* MainMenu.xib */; };
+		F3798A12155457A9003CBD9D /* MacInventory.icns in Resources */ = {isa = PBXBuildFile; fileRef = F3798A11155457A9003CBD9D /* MacInventory.icns */; };
+		F3D64F6F154F0347006C977C /* CredentialsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D64F6D154F0347006C977C /* CredentialsWindowController.m */; };
+		F3D64F70154F0347006C977C /* CredentialsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3D64F6E154F0347006C977C /* CredentialsWindowController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F31057D115536AFE0026AD7E /* drivemodel.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = drivemodel.sh; sourceTree = "<group>"; };
+		F31413EC154E0FDA00E825DE /* mountshare.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mountshare.sh; sourceTree = "<group>"; };
+		F3205FCD154BC0B2007D21D2 /* getserial.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = getserial.sh; sourceTree = "<group>"; };
+		F3205FD1154BC613007D21D2 /* getmodel.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = getmodel.sh; sourceTree = "<group>"; };
+		F3205FD4154C2200007D21D2 /* getram.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = getram.sh; sourceTree = "<group>"; };
+		F3205FD6154C2C0A007D21D2 /* banksize.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = banksize.sh; sourceTree = "<group>"; };
+		F3205FD8154C2E71007D21D2 /* bankspeed.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = bankspeed.sh; sourceTree = "<group>"; };
+		F3205FDA154C3DC6007D21D2 /* getos.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = getos.sh; sourceTree = "<group>"; };
+		F3205FDC154C4149007D21D2 /* getdisks.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = getdisks.sh; sourceTree = "<group>"; };
+		F3205FDE154C4629007D21D2 /* whoami.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = whoami.sh; sourceTree = "<group>"; };
+		F3356519154BB8B9009449C6 /* MacInventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacInventory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F335651D154BB8B9009449C6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F3356520154BB8B9009449C6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		F3356521154BB8B9009449C6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F3356522154BB8B9009449C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F3356525154BB8B9009449C6 /* MacInventory-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MacInventory-Info.plist"; sourceTree = "<group>"; };
+		F3356527154BB8B9009449C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F3356529154BB8B9009449C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F335652B154BB8B9009449C6 /* MacInventory-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacInventory-Prefix.pch"; sourceTree = "<group>"; };
+		F335652D154BB8B9009449C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		F335652F154BB8B9009449C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F3356530154BB8B9009449C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F3356533154BB8B9009449C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F3798A11155457A9003CBD9D /* MacInventory.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MacInventory.icns; sourceTree = "<group>"; };
+		F3D64F6C154F0347006C977C /* CredentialsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CredentialsWindowController.h; sourceTree = "<group>"; };
+		F3D64F6D154F0347006C977C /* CredentialsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CredentialsWindowController.m; sourceTree = "<group>"; };
+		F3D64F6E154F0347006C977C /* CredentialsWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CredentialsWindowController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3356516154BB8B9009449C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F335651E154BB8B9009449C6 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3205FD0154BC157007D21D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F3205FCD154BC0B2007D21D2 /* getserial.sh */,
+				F3205FD1154BC613007D21D2 /* getmodel.sh */,
+				F3205FD4154C2200007D21D2 /* getram.sh */,
+				F3205FD6154C2C0A007D21D2 /* banksize.sh */,
+				F3205FD8154C2E71007D21D2 /* bankspeed.sh */,
+				F3205FDA154C3DC6007D21D2 /* getos.sh */,
+				F3205FDC154C4149007D21D2 /* getdisks.sh */,
+				F3205FDE154C4629007D21D2 /* whoami.sh */,
+				F31413EC154E0FDA00E825DE /* mountshare.sh */,
+				F31057D115536AFE0026AD7E /* drivemodel.sh */,
+			);
+			name = Resources;
+			path = MacInventory;
+			sourceTree = "<group>";
+		};
+		F335650E154BB8B9009449C6 = {
+			isa = PBXGroup;
+			children = (
+				F3356523154BB8B9009449C6 /* MacInventory */,
+				F335651C154BB8B9009449C6 /* Frameworks */,
+				F335651A154BB8B9009449C6 /* Products */,
+				F3205FD0154BC157007D21D2 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		F335651A154BB8B9009449C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3356519154BB8B9009449C6 /* MacInventory.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F335651C154BB8B9009449C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F335651D154BB8B9009449C6 /* Cocoa.framework */,
+				F335651F154BB8B9009449C6 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F335651F154BB8B9009449C6 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3356520154BB8B9009449C6 /* AppKit.framework */,
+				F3356521154BB8B9009449C6 /* CoreData.framework */,
+				F3356522154BB8B9009449C6 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		F3356523154BB8B9009449C6 /* MacInventory */ = {
+			isa = PBXGroup;
+			children = (
+				F3798A11155457A9003CBD9D /* MacInventory.icns */,
+				F3D64F6C154F0347006C977C /* CredentialsWindowController.h */,
+				F3D64F6D154F0347006C977C /* CredentialsWindowController.m */,
+				F3D64F6E154F0347006C977C /* CredentialsWindowController.xib */,
+				F335652F154BB8B9009449C6 /* AppDelegate.h */,
+				F3356530154BB8B9009449C6 /* AppDelegate.m */,
+				F3356532154BB8B9009449C6 /* MainMenu.xib */,
+				F3356524154BB8B9009449C6 /* Supporting Files */,
+			);
+			path = MacInventory;
+			sourceTree = "<group>";
+		};
+		F3356524154BB8B9009449C6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3356525154BB8B9009449C6 /* MacInventory-Info.plist */,
+				F3356526154BB8B9009449C6 /* InfoPlist.strings */,
+				F3356529154BB8B9009449C6 /* main.m */,
+				F335652B154BB8B9009449C6 /* MacInventory-Prefix.pch */,
+				F335652C154BB8B9009449C6 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3356518154BB8B9009449C6 /* MacInventory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3356537154BB8B9009449C6 /* Build configuration list for PBXNativeTarget "MacInventory" */;
+			buildPhases = (
+				F3356515154BB8B9009449C6 /* Sources */,
+				F3356516154BB8B9009449C6 /* Frameworks */,
+				F3356517154BB8B9009449C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacInventory;
+			productName = MacInventory;
+			productReference = F3356519154BB8B9009449C6 /* MacInventory.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3356510154BB8B9009449C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = PeopleMatter;
+			};
+			buildConfigurationList = F3356513154BB8B9009449C6 /* Build configuration list for PBXProject "MacInventory" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F335650E154BB8B9009449C6;
+			productRefGroup = F335651A154BB8B9009449C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3356518154BB8B9009449C6 /* MacInventory */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3356517154BB8B9009449C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F31057D315536FB40026AD7E /* drivemodel.sh in Resources */,
+				F3205FDD154C4157007D21D2 /* getdisks.sh in Resources */,
+				F3205FDB154C3DDA007D21D2 /* getos.sh in Resources */,
+				F3205FD9154C2F4A007D21D2 /* bankspeed.sh in Resources */,
+				F3205FD5154C2315007D21D2 /* getram.sh in Resources */,
+				F3205FD2154BC8CC007D21D2 /* getserial.sh in Resources */,
+				F3205FD3154BC8CC007D21D2 /* getmodel.sh in Resources */,
+				F3356528154BB8B9009449C6 /* InfoPlist.strings in Resources */,
+				F335652E154BB8B9009449C6 /* Credits.rtf in Resources */,
+				F3356534154BB8B9009449C6 /* MainMenu.xib in Resources */,
+				F3205FD7154C2C0A007D21D2 /* banksize.sh in Resources */,
+				F3205FDF154C462A007D21D2 /* whoami.sh in Resources */,
+				F31413ED154E0FDA00E825DE /* mountshare.sh in Resources */,
+				F3D64F70154F0347006C977C /* CredentialsWindowController.xib in Resources */,
+				F3798A12155457A9003CBD9D /* MacInventory.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3356515154BB8B9009449C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F335652A154BB8B9009449C6 /* main.m in Sources */,
+				F3356531154BB8B9009449C6 /* AppDelegate.m in Sources */,
+				F3D64F6F154F0347006C977C /* CredentialsWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F3356526154BB8B9009449C6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3356527154BB8B9009449C6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F335652C154BB8B9009449C6 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F335652D154BB8B9009449C6 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		F3356532154BB8B9009449C6 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3356533154BB8B9009449C6 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3356535154BB8B9009449C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F3356536154BB8B9009449C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F3356538154BB8B9009449C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacInventory/MacInventory-Prefix.pch";
+				INFOPLIST_FILE = "MacInventory/MacInventory-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F3356539154BB8B9009449C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MacInventory/MacInventory-Prefix.pch";
+				INFOPLIST_FILE = "MacInventory/MacInventory-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3356513154BB8B9009449C6 /* Build configuration list for PBXProject "MacInventory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3356535154BB8B9009449C6 /* Debug */,
+				F3356536154BB8B9009449C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3356537154BB8B9009449C6 /* Build configuration list for PBXNativeTarget "MacInventory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3356538154BB8B9009449C6 /* Debug */,
+				F3356539154BB8B9009449C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3356510154BB8B9009449C6 /* Project object */;
+}

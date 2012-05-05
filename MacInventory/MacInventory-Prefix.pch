@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'MacInventory' target in the 'MacInventory' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
